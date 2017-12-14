@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane fx:controller="spapplication.Controller" fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <Menu mnemonicParsing="false" text="New">
+                    <items>
+                      <MenuItem onAction="#newFile" mnemonicParsing="false" text="16x16"/>
+                        <MenuItem onAction="#newFile" mnemonicParsing="false" text="32x32"/>
+                        <MenuItem onAction="#newFile" mnemonicParsing="false" text="64x64"/>
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" text="Import PNG" onAction="#openFile" />
+                  <MenuItem mnemonicParsing="false" text="Save PNG" onAction="#saveFile"/>
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <GridPane id="canvasGrids" fx:id="canvasGrid" gridLinesVisible="true" maxHeight="500.0" maxWidth="500.0" BorderPane.alignment="CENTER">
+      </GridPane>
+   </center>
+   <bottom>
+      <ColorPicker fx:id="colorPicker" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="25.0" />
+         </BorderPane.margin>
+      </ColorPicker>
+   </bottom>
+</BorderPane>
